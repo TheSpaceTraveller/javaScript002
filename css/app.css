@@ -1,0 +1,52 @@
+/* ---------- General
+ */
+ .Wrap{
+     width: 90%;
+     max-width: 1000px;
+     margin: 0 auto;
+
+ }
+
+
+
+
+
+
+ /* ----------Nav
+  */
+.top-bar{
+    height: 100px;
+}
+.img{
+    height: 100px;
+}
+
+
+
+
+  /* ----------Hero
+   */
+.Hero{ padding: 50px 30px 20px 30px;
+    background-color: azure
+
+}
+
+
+
+
+   /* ----------Main
+    */
+.Main{ padding: 50px 30px 50px 30px;
+
+}
+
+
+
+    /* ----------Footer
+     */
+footer{ height: 200px;
+    
+}
+li{
+    list-style: none;
+}

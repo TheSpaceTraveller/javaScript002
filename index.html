@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>JS Problems</title>
+    <link rel="stylesheet" href="css/foundation.css">
+    <meta charset="UTF-8">
+<script>///////////////////////////////TRI/////////////////////////////////////
+
+
+function tri() {
+    var a;
+    var b;
+
+
+    // input tri
+    a = document.forms['input_tri']['numA'].value;
+    b = document.forms['input_tri']['numB'].value;
+   
+   
+   
+     // validate
+
+    if (a == 0) {
+        outputText = '"A" has to be greater than zero'
+    }
+    if (b == 0) {
+        outputText = '"B" has to be greater than zero'
+    }
+    
+    else if (isNaN(a)) {
+        outputText = '"A" must be a number'
+    }
+    else if (isNaN(b)) {
+        outputText = '"B" must be a number'
+    }
+    
+    // Calculation
+
+    else {
+        a = parseInt(a)
+        b = parseInt(b)
+    area =  (a)*(b)*(.5);
+   
+    outputText = "Answer"+" " + area;
+    }
+    document.getElementById("output_tri").innerHTML = outputText;
+}
+</script>
+<script>////////////////////////////////CIRCLE////////////////////////////////
+
+
+function cir() {
+    var d;
+    
+    // input tri
+    d = document.forms['input_cir']['numD'].value;
+   
+   
+     // validate
+     if (d <= 0) {
+        outputText = '"Radius" has to be greater than zero'
+    }
+    else if (isNaN(d)) {
+        outputText = '"Radius" must be a number'
+    }
+    // Calculation
+    else {
+        pi = 3.14
+        d = parseInt(d)
+       area = (pi)*(d*d);
+      
+     
+    outputText = "Answer"+" " + area;
+    }
+    document.getElementById("output_cir").innerHTML = outputText;
+}
+</script>
+<script>////////////////////////////REC//////////////////////////////////
+    
+function rec() {
+    var a;
+    var b;
+
+    // input rec
+    a = document.forms['input_rec']['numA'].value;
+    b = document.forms['input_rec']['numB'].value;
+    
+   
+     // validate
+
+    if (a <= 0) {
+        outputText = '"A" has to be greater than zero'
+    }
+    if (b <= 0) {
+        outputText = '"B" has to be greater than zero'
+    }
+   
+    
+    else if (isNaN(a)) {
+        outputText = '"A" must be a number'
+    }
+    else if (isNaN(b)) {
+        outputText = '"B" must be a number'
+    }
+   
+   
+    // Calculation
+
+    else {
+        a = parseInt(a)
+        b = parseInt(b)
+       
+    area =  a*b;
+   
+    outputText = "Answer"+" " + area;
+    }
+    document.getElementById("output_rec").innerHTML = outputText;
+}
+</script>
+
+<script>/////////////////////TRAP/////////////////////////////////////
+function trap() {
+    var a;
+    var b;
+    var c;
+
+
+    // input trap
+    a = document.forms['input_trap']['numA'].value;
+    b = document.forms['input_trap']['numB'].value;
+    c = document.forms['input_trap']['numC'].value;
+   
+   
+     // validate
+
+    if (a <= 0) {
+        outputText = '"Base1" cannot equal zero'
+    }
+    if (b <= 0) {
+        outputText = '"Base2" cannot equal zero'
+    }
+    if (c <= 0) {
+        outputText =  '"Height" cannot equal zero '
+    }
+    
+    else if (isNaN(a)) {
+        outputText = '"Base1" must be a number'
+    }
+    else if (isNaN(b)) {
+        outputText = '"Base2" must be a number'
+    }
+    else if (isNaN(c)) {
+        outputText = '"Height" must be a number'
+    }
+    
+    // Calculation
+
+    else {
+        a = parseInt(a)
+        b = parseInt(b)
+        c = parseInt(c)
+    area = (.5)*(a+b)*(c);
+   
+    outputText = "Answer"+" " + area;
+    }
+    document.getElementById("output_trap").innerHTML = outputText;
+}
+</script>
+
+</script>
+
+
+</head>
+<body>
+   <div class="row">
+        <div class="columns">
+          <h2>Let's Calculate Areas</h2>
+          </div>
+      </div>
+      
+      <div class="row">
+        <div class="columns">
+          <h4>Attention</h4>
+          <div class="alert callout">
+            <p>Click on name of shape to calculate area <br />Have fun!!!!!!</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="columns" >
+          <ul class="accordion" data-responsive-accordion-tabs="accordion medium-tabs large-accordion">
+            <li class="accordion-item is-active" data-accordion-item>
+              <a href="#" class="accordion-title">Triangle</a>
+              <div class="accordion-content" data-tab-content >
+                    <h2>Calculate area of a <strong>Triangle</strong> knowing base and height</h2>
+                    <form name="input_tri" action="javascript:tri();">
+                        height: <input type="text" name="numA" id=""  required>
+                        base: <input type="text" name="numB" id="" required>
+                      
+                        <br><br><br>
+                       <input class="button" type="submit" value="Calculate">
+                    </form>
+                    <p  id="output_tri"></p>
+              </div>
+            </li>
+            <li class="accordion-item" data-accordion-item>
+              <a href="#" class="accordion-title">Circle</a>
+              <div class="accordion-content" data-tab-content>
+                    <h2>Calculate area of a <strong>Circle</strong> Knowing the radius</h2>
+                    <form name="input_cir" action="javascript:cir();">
+                        Radius: <input type="text" name="numD" id="" required>
+                        <br><br><br>
+                       <input class="button" type="submit" value="Calculate">
+                    </form>
+                    <p id="output_cir"></p> 
+              </div>
+            </li>
+            <li class="accordion-item" data-accordion-item>
+              <a href="#" class="accordion-title">Rectangle</a>
+              <div class="accordion-content" data-tab-content>
+                    <h2>Calculate area of a <strong>Rectangle</strong> Knowing 2 side lengths</h2>
+                    <form name="input_rec" action="javascript:rec();">
+                        a: <input type="text" name="numA" id="" required>
+                        b: <input type="text" name="numB" id="" required>
+                        
+                        <br><br><br>
+                       <input class="button" type="submit" value="Calculate">
+                    </form>
+                    <p id="output_rec"></p>
+              </div>
+              <li class="accordion-item" data-accordion-item>
+                    <a href="#" class="accordion-title">Tradezoid</a>
+                    <div class="accordion-content" data-tab-content>
+                            <h2>Calculate area of a <strong>Trapezoid</strong> Knowing both bases and height</h2>
+                            <form name="input_trap" action="javascript:trap();">
+                                Base1: <input type="text" name="numA" id="" required>
+                                Base2: <input type="text" name="numB" id="" required>
+                                Height: <input type="text" name="numC" id="" required>
+                                <br><br><br>
+                                <p id="output_trap"></p>
+                                <input class="button" type="submit" value="Calculate">
+                            </form>
+                           
+                    </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+       
+      <script src="https://code.jquery.com/jquery-1.11.3.js"></script>
+      <script src="js/vendor/foundation.min.js"></script>
+      <script src="js/vendor/foundation.js"></script>
+      <script src="https://cdn.jsdelivr.net/foundation/6.1.1/js/foundation.accordion.js"></script>
+      
+      <script type="text/javascript">
+              $(document).ready(function () {
+              $(document).foundation();
+          });
+      </script>
+    
+   
+
+</body>
+</html>
